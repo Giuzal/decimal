@@ -7,5 +7,6 @@ typedef struct
 } s21_decimal;
 
 void print_binary(int num);
+void print_decimal(s21_decimal num);
 
 #endif // !SRC_S21_DECIMAL_H

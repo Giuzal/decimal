@@ -10,11 +10,15 @@ void print_binary(int num)
     printf("\n");
 }
 
+void print_decimal(s21_decimal num){
+    for(int i = 3; i >= 0; i--){
+        print_binary(num.bits[i]);
+    }
+}
+
 int main()
 {
-    int num = 0;
-    printf("enter a num\n");
-    scanf("%d", &num);
-    print_binary(num);
+    s21_decimal(num) = {0};
+    print_decimal(num);
     return 0;
 }
