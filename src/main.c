@@ -16,9 +16,24 @@ void print_decimal(s21_decimal num){
     }
 }
 
+void set_sign(s21_decimal *num, int sign)
+{
+    num->bits[3] |= sign << 31;
+}
+
+void set_scale(s21_decimal *num, int scale)
+{
+    num->bits[3] |= scale << 16;
+}
+
 int main()
 {
-    s21_decimal(num) = {0};
+    s21_decimal(num) = {1, 1, 1, 0};
+    set_sign(&num, 1);
+    set_scale(&num, 3);
     print_decimal(num);
+    s21_decimal(num2) = {3, 4, 213, 0};
+
+    
     return 0;
 }
